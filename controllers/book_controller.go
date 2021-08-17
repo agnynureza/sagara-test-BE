@@ -218,9 +218,9 @@ func (h *BookController) DeleteBook(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.Status(fiber.StatusNoContent).JSON(fiber.Map{
+	return c.Status(fiber.StatusOK).JSON(fiber.Map{
 		"error": false,
-		"msg":   fmt.Sprintf("success delete data with id : %d", book.ID),
+		"msg":   fmt.Sprintf("success delete data with id : %s", book.ID),
 	})
 }
 
