@@ -237,7 +237,7 @@ func (h *BookController) UploadBookImage(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": "Server error",
-			"error":   err,
+			"error":   err.Error(),
 		})
 	}
 	uploadedFile, _ := handler.Open()
@@ -247,7 +247,7 @@ func (h *BookController) UploadBookImage(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": "Server error",
-			"error":   err,
+			"error":   err.Error(),
 		})
 	}
 	defer tempFile.Close()
@@ -257,7 +257,7 @@ func (h *BookController) UploadBookImage(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": "Server error",
-			"error":   err,
+			"error":   err.Error(),
 		})
 	}
 
@@ -265,7 +265,7 @@ func (h *BookController) UploadBookImage(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": "Server error",
-			"error":   err,
+			"error":   err.Error(),
 		})
 	}
 
