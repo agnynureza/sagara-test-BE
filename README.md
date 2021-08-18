@@ -3,9 +3,9 @@
 the goal of these task are to create CRUD API, auth JWT and upload picture 
 
 ## setup
-1. go mod tidy 
-2. env already set then type `go run main.go`
-3. Hit the Server to test Health `localhost:5000/api/v1/health` and 
+1. use dockerfile to create docker image
+2. type ```make docker.fiber``` to build and run
+3. Hit the Server to test Health `localhost:5000/api/v1/health`
 4. let's Rock !! 🚀
 
 ### Tasks 
